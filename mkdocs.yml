@@ -6,7 +6,8 @@ repo_url: https://github.com/caoqianming/django3x-best-practice
 remote_branch: main
 edit_uri: 'edit/main/docs/'
 
-# nav:
-#   - 首页: 'index.md'
-#   - 作者注: 'authors_notes.md'
-#   - 简介: 'information.md'
+nav:
+  - 前言: 'index.md'
+  - 作者注: 'authors_notes.md'
+  - 简介: 'information.md'
+  - 代码格式: 'coding_style.md'
