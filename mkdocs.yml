@@ -1,2 +1,7 @@
 site_name: Two Scoops of Django 3.x 中文版
+site_author: caoqianming
 theme: readthedocs
+
+repo_url: https://github.com/caoqianming/django3x-best-practice
+remote_branch: main
+edit_uri: 'edit/main/docs/'

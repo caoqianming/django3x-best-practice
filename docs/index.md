@@ -1,17 +1,5 @@
-# Welcome to MkDocs
+# 前言
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+使用Django很长时间了还没有看过这本书，搜了一圈没发现中文版，正好试着翻译一下，当看书了，如果对你有帮助，给个星星就行。
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+github地址在这里: [django3x-best-practice](https://github.com/caoqianming/django3x-best-practice).
