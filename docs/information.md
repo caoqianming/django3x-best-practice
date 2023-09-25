@@ -19,6 +19,6 @@
 
 我们全力以赴，不断改进和完善本书，我们是认真的。如果您发现任何你不同意的做法，或者任何可以做得更好的地方，我们恳请你向我们提出改进建议。向我们发送反馈的最佳方式是在
 
-github.com/feldroy/two-scoops-of-django-3.x/issues。
+<https://github.com/feldroy/two-scoops-of-django-3.x/issues>
 
 请不要犹豫，告诉我们哪些地方可以改进。我们将积极采纳您的反馈意见
