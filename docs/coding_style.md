@@ -73,3 +73,39 @@ Django 项目中的导入顺序是
 2. 从 Django 核心导入。
 3. 从第三方应用程序（包括与 Django 无关的应用程序）导入
 4. 从作为 Django 项目一部分创建的应用程序导入
+## 1.4 理解绝对/相对导入
+在编写代码时，重要的是要让移动、重命名和编辑变得更容易和版本化工作。在 Python 中，显式相对导入是一种强大的方式，它可以将单个模块与它们周围的体系结构分离开来。因为Django 应用程序是简单的 Python 包，因此同样的规则也适用。为了说明显式相对导入的好处，让我们来看一个例子。想象一下以下代码段来自您创建的 Django 项目，该项目用于跟踪您的冰淇淋
+消费情况，包括您吃过的所有华夫饼/糖/蛋糕筒。
+```python
+# cones/views.py
+from django.views.generic import CreateView
+# Relative imports of the 'cones' package
+from .models import WaffleCone
+from .forms import WaffleConeForm
+# absolute import from the 'core' package
+from core.views import FoodMixin
+class WaffleConeCreateView(FoodMixin, CreateView):
+model = WaffleCone
+form_class = WaffleConeForm
+```
+当需要从当前app外导入时，使用绝对导入；当只是从本app其他模块导入时，使用相对导入
+## 1.5 避免使用import *
+这样做是为了避免隐式地将另一个 Python 模块的所有局部加载到和我们当前模块的命名空间，这会产生不可预知的，有时甚至是灾难性的结果。
+### 1.5.1 一些Python的导入冲突
+可以这样处理
+```python
+from django.db.models import CharField as ModelCharField
+from django.forms import CharField as FormCharField
+```
+## 1.6 Django代码样式
+本节既包括官方指南，也包括非官方但普遍接受的Django 约定。
+### 1.6.1 考虑 Django 编码风格指南
+不言而喻，了解常见的 Django 风格约定是个好主意。事实上，Django 内部有一套自己的风格指南，扩展了 PEP 8：
+<https://docs.djangoproject.com/en/3.2/internals/contributing/writing-code/ coding-style/>
+此外，虽然官方标准中没有指定以下内容，但它们在 Django 社区中足够常见，您可能会希望在您的项目中遵循它们。
+<https://docs.djangoproject.com/en/3.2/internals/>
+### 1.6.2 在 URL 中使用下划线而不是短横线
+我们总是尽量使用下划线（"_"字符）而不是短横线。这不仅更Pythonic，而且对更多的集成开发环境和文本编辑器也更友好。请注意，这里我们指的是名称参数，而不是在浏览器中输入的实际 URL。
+### 1.6.3 在模板块名称中使用下划线而不是短横线
+
+tip: 部分跳过未翻译
