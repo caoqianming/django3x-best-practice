@@ -11,3 +11,4 @@ nav:
   - 作者注: 'authors_notes.md'
   - 简介: 'information.md'
   - 代码格式: 'coding_style.md'
+  - Django最佳环境配置: 'optimal_env.md'
